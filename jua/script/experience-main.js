@@ -7,7 +7,7 @@ const main = function () {
           const experienceElement = document.createElement("div");
           experienceElement.setAttribute("class", "col-md");
 
-          experienceElement.innerHTML = `<div class="card">
+          experienceElement.innerHTML = `<div class="card hoverFocus">
           <div class="card-body">
           ${name} 
           </div>

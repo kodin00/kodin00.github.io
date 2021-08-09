@@ -16,7 +16,7 @@
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="styles/style.css">
 
-    <title>Experience</title>
+    <title>Pendahuluan</title>
     <link rel="icon" href="assets/images/logo.png">
   </head>
 
@@ -66,17 +66,44 @@
       </div>
     </nav>
 
-    <!-- Experience List -->
-    <section class="p-5 p-lg-0 pt-lg-5">
-      <div class="container-fluid">
-        <h1 class="mb-4 fw-bold text-center">Experience</h1>
-        <div id="experienceList" class="row row-cols-md-4 row-cols-2 g-3 text-center"></div>
+    <!-- Pendahuluan -->
+    <section class="p-5">
+      <div class="container">
+        <div class="text-center">
+          <h1 class="fw-bold mb-4">Pendahuluan</h1>
+        <p class="lead">
+          Perusahan yang berdiri sejak 06 Maret 2003 dengan nama PT.Jati Unggul Abadi dirintis oleh para professional
+          yang telah berpengalaman baik diperusahaan swasta Nasioanal / Asing maupun Instansi pemerintah.
+
+          Dengan semangat kewirausahaan kami bertekad untuk selalu memBangun, berKarya, dan Unggul dalam menghadapi
+          ketatnya persaingan hidup di negeri kita, sesuai dengan falsafah pembentukan nama perusahaan ini yakni PT Jati
+          Unggul Abadi.
+
+          Semangat kebersamaan dan keinginan untuk menciptakan lapangan kerja serta mempercepat pertumbuhan ekonomi
+          nasional, telah tertanam dihati para perintis, karyawan dan mitra kerja sehingga PT. Jati Unggul Abadi saat
+          ini tetap eksis, tumbuh dan berkembang.
+          Berpegang pada pilar idealisme dan profesionalisme yang berdiri kokoh diatas pondasi kebersamaan memiliki
+          maksud dan tujuan memberikan pelayanan jasa Pengadaan, Pemeliharaan dan Perbaikan Kapal Laut pada masyarakat
+          dan Pemerintah Republik Indonesia dalam mewujudkan secara fisik.
+          Dengan dukungan tenaga professional yang kami miliki dan terampil dibidang masing-masing, kiranya hambatan dan
+          masalah yang di hadapi senantiasa dapat terselesaikan dengan baik.
+
+          Perusahaan Swasta Nasional yang ber awal mengkonsentrasikan diri pada bidang usaha jasa Pengadaan,
+          Pemeliharaan dan Perbaikan Kapal laut ini telah memgembangkan diri membentuk Divisi Konstrusi pada tahun 2006
+          dan berhasil menyelesaikan Proyek - proyek, baik dari Intansi Pemerintah, BUMN, maupun perusahaan Swasta
+          berupa pekerjaan pengadaan barang, Pemeliharaan dan Perbaikan kapal laut, serta membangun rumah tinggal, sarana
+          Ibadah, Gedung Perkantoran, Infrastruktur dan lain-lain
+
+          Kiranya kekurangan dan sempurnaan pasti ada pada kami, hal tersebut kami sadari dan kami jadikan cambuk bagi
+          kami untuk melangkah dimasa mendatang dengan prestasi yang lebih baik.
+        </p>
+        <p class="lead">Direksi</p>
+        <h5 class="fw-bold">PT Jati Unggul Abadi</h2>
       </div>
+    </div>
     </section>
 
-    <!-- dependency.js -->
-    <script src="script/experience-data.js"></script>
-    <script src="script/experience-main.js"></script>
+    <!-- app.js -->
     <script src="script/app.js"></script>
 
     <!-- Bootstrap -->
@@ -84,6 +111,26 @@
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
       crossorigin="anonymous"></script>
 
+    <!-- AniJS core library -->
+    <script src="https://anijs.github.io/lib/anijs/anijs-min.js"></script>
+
+    <!-- ScrollRevealJS -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      var slideUp = {
+        distance: '100%',
+        origin: 'bottom',
+        duration: 1000,
+        opacity: 0,
+        scale: 0.5,
+        desktop: true,
+        mobile: false,
+        reset: false,
+
+      };
+
+      ScrollReveal().reveal('.slideUp', slideUp);
+    </script>
   </body>
 
 </html>

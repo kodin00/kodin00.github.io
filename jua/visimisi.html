@@ -7,13 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- AniJS -->
+    <link rel="stylesheet" href="https://anijs.github.io/lib/anicollection/anicollection.css">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="styles/style.css">
 
-    <title>Our Business</title>
+    <title>Visi & Misi</title>
     <link rel="icon" href="assets/images/logo.png">
   </head>
 
@@ -63,39 +66,45 @@
       </div>
     </nav>
 
-    <!-- Section -->
-    <section class="slideUp p-5 p-lg-0 pt-lg-5 text-center text-sm-start mb-5">
+    <!-- Pendahuluan -->
+    <section class="p-5">
       <div class="container">
-        <div class="d-sm-flex align-items-center justify-content-around">
-          <img src="assets/images/tool.png" alt="tool" class="img-fluid w-50 d-sm-none">
-          <div>
-            <h1 class="mb-4 fw-bold">Our Business
-            </h1>
-            <p class="lead">
-              These what we can do for you
-            </p>
-          </div>
-          <img src="assets/images/tool.png" alt="tool" class="img-fluid w-50 d-none d-sm-block">
+        <div class="text-center">
+          <h1 class="fw-bold mb-2">Visi</h1>
+          <p class="lead">
+            Menjadi perusahaan yang sehat, mandiri, berdaya saing Nasional dan
+            Internasional serta mampu memenuhi kepuasan pelanggan dengan produk yang
+            berkualitas.
+          </p>
+          <h1 class="fw-bold mb-2 mt-4">Misi</h1>
+          <p class="lead">
+            Menggalakkan semangat kewirausahaan dan menciptakan lapangan kerja Guna
+            percepatan pemulihan dibidang ekonomi dan pembangunan nasional.
+            Menghasilkan karya / produk yang bermutu yang dapat memenuhi keinginan /
+            pelanggan melalui kualitas produk yang sesuai dengan persyaratan dan keinginan pelanggan,
+            ketepatan waktu pelaksanaan sesuai dengan rencana, optimalisasi kinerja , keselamatan dan Kesehatan Kerja.
+            <br>
+            Meningkatkan kemampuan karyawan, mitra kerja serta masyarakat yang
+            didasarkan kepada profesionalisme dalam menghadapi perdagangan bebas.
+            <br>
+            Mendorong terrciptanya tertib penyelenggaraan pengadaan barang dan jasa yang
+            kompentitif, transparan, adil / non diskriminatif.
+          </p>
+
         </div>
       </div>
     </section>
 
-    <!-- Business List -->
-    <section class="slideUp p-5">
-      <div class="container">
-        <div id="businessList" class="row row-cols-md-3 text-center g-5"></div>
-      </div>
-    </section>
-
-    <!-- dependency.js -->
-    <script src="script/business-data.js"></script>
-    <script src="script/business-main.js"></script>
+    <!-- app.js -->
     <script src="script/app.js"></script>
 
     <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
       crossorigin="anonymous"></script>
+
+    <!-- AniJS core library -->
+    <script src="https://anijs.github.io/lib/anijs/anijs-min.js"></script>
 
     <!-- ScrollRevealJS -->
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -114,7 +123,6 @@
 
       ScrollReveal().reveal('.slideUp', slideUp);
     </script>
-
   </body>
 
 </html>

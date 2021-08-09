@@ -7,7 +7,7 @@ const main = function () {
     const businessElement = document.createElement("div");
     businessElement.setAttribute("class", "col-md");
 
-    businessElement.innerHTML = `<div class="card">
+    businessElement.innerHTML = `<div class="card hoverFocus">
           <img src="hit.png" alt="" class="card-img-top img-fluid">
           <div class="card-body">
             <h5 class="card-title fw-bold">${title}</h5>
