@@ -1,1 +1,46 @@
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap);body{font-family:Montserrat,sans-serif}body::-webkit-scrollbar{display:none}.logo{width:40px}#map{width:100%;height:100%;border-radius:10px}body::before{display:block;content:"";height:60px}.hoverFocus:hover{-webkit-transform:scale(1.1);-moz-transform:scale(1.1);-o-transform:scale(1.1);-ms-transform:scale(1.1);transition:.5s}.hoverFocus{-webkit-transform:scale(1);-moz-transform:scale(1);-o-transform:scale(1);-ms-transform:scale(1);transition:.5s}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Hide ScrollBar on Body */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Navbar Logo */
+.logo {
+  width: 40px;
+}
+
+/* MapBox */
+#map {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* Give Spacing to the Items Below the Navbar */
+body::before {
+  display: block;
+  content: "";
+  height: 60px;
+}
+
+/* Focus on Hover */
+.hoverFocus:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.hoverFocus {
+    -webkit-transform: scale(1.0);
+    -moz-transform: scale(1.0);
+    -o-transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    transition: 0.5s;
+}
