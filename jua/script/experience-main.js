@@ -12,9 +12,6 @@ const main = function () {
           ${name} 
           </div>
           </div>`;
-
           experienceListElement.appendChild(experienceElement);
       })
-
-
 };

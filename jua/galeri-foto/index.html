@@ -14,10 +14,10 @@
     <link rel="stylesheet" href="https://anijs.github.io/lib/anicollection/anicollection.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="/styles/style.css">
 
-    <title>Pengalaman</title>
-    <link rel="icon" href="assets/images/logo.png">
+    <title>Galeri Foto</title>
+    <link rel="icon" href="/assets/images/logo.png">
   </head>
 
   <body>
@@ -27,8 +27,8 @@
       <div class="container">
         <a href="/" class="navbar-brand">
           <!-- <img src="assets/images/logo.png" class="logo img-fluid w-50" alt="logo jua"> -->
-          <img src="assets/images/logo.png" class="img logo" alt="logo jua">
-          PT Jati Unggul Abadi
+          <img src="/assets/images/logo.png" class="img logo" alt="logo jua">
+          Galeri Foto
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
@@ -37,14 +37,14 @@
 
         <div id="navmenu" class="collapse navbar-collapse">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a href="bisnis.html" class="nav-link">Bisnis Kami</a></li>
-            <li><a class="nav-link" href="pendahuluan.html">Pendahuluan</a></li>
-            <li><a class="nav-link" href="visimisi.html">Visi & Misi</a></li>
-            <li><a class="nav-link" href="galeri-foto">Galeri Foto</a></li>
-            <li><a class="nav-link" href="pengalaman.html">Pengalaman</a></li>
-            <li><a class="nav-link" href="assets/pdf/Company Profile PT. JUA.pdf" target="_blank"
+            <li class="nav-item"><a href="/bisnis.html" class="nav-link">Bisnis Kami</a></li>
+            <li><a class="nav-link" href="/pendahuluan.html">Pendahuluan</a></li>
+            <li><a class="nav-link" href="/visimisi.html">Visi & Misi</a></li>
+            <li><a class="nav-link" href="/galeri-foto/">Galeri Foto</a></li>
+            <li><a class="nav-link" href="/pengalaman.html">Pengalaman</a></li>
+            <li><a class="nav-link" href="/assets/pdf/Company Profile PT. JUA.pdf" target="_blank"
                 rel="noopener noreferrer">Company Profile</a></li>
-            <li class="nav-item"><a href="kontak.html" class="nav-link">Kontak</a></li>
+            <li class="nav-item"><a href="/kontak.html" class="nav-link">Kontak</a></li>
           </ul>
         </div>
       </div>
@@ -54,37 +54,60 @@
     <section class="slideUp p-5 p-lg-0 pt-lg-5 text-center mb-5">
       <div class="container">
         <div class="d-sm-flex align-items-center justify-content-around">
-          <img src="assets/images/star.png" alt="star" class="img-fluid w-50 d-sm-none">
+          <img src="assets/camera.png" alt="camera" class="img-fluid w-50 d-sm-none">
           <div>
-            <h1 class="mb-4 fw-bold">Pengalaman Kami
+            <h1 class="mb-4 fw-bold">Galeri Foto
             </h1>
             <p class="lead">
-              Banyaknya pengalaman dalam bekerja membuat kami menjadi lebih baik
+              Kumpulan foto yang kami abadikan
             </p>
           </div>
-          <img src="assets/images/star.png" alt="star" class="img-fluid w-50 d-none d-sm-block">
+          <img src="/assets/images/camera.png" alt="camera" class="img-fluid w-50 d-none d-sm-block">
         </div>
       </div>
     </section>
 
-    <!-- Experience List -->
+    <!-- Galeri List -->
     <section class="slideUp p-5">
-      <div class="container-fluid">
-        <div id="experienceList" class="row row-cols-md-4 row-cols-2 g-3 text-center"></div>
+      <div class="container">
+        <div class="row row-cols-md-3 text-center g-4">
+          <div class="col-md">
+            <a href="interior-kapal.html" class="card btn hoverFocus">
+              <img src="/assets/images/camera.png" alt="photo" class="card-img-top">
+              <div class="card-body">
+                <p class="card-text">Interior Kapal</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-md">
+            <a href="exterior-kapal.html" class="card btn hoverFocus">
+              <img src="/assets/images/camera.png" alt="photo" class="card-img-top">
+              <div class="card-body">
+                <p class="card-text">Exterior Kapal</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-md">
+            <a href="staff-kami.html" class="card btn hoverFocus">
+              <img src="/assets/images/camera.png" alt="photo" class="card-img-top">
+              <div class="card-body">
+                <p class="card-text">Staff Kami</p>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Footer -->
     <footer class="p-4 bg-dark text-white text-center">
       <div class="container">
-        <img src="assets/images/logo.png" class="logo" alt="jua logo">
+        <img src="/assets/images/logo.png" class="logo" alt="jua logo">
         <p>Copyright &copy; 2021 PT Jati Unggul Abadi</p>
       </div>
     </footer>
 
-    <!-- dependency.js -->
-    <script src="script/experience-data.js"></script>
-    <script src="script/experience-main.js"></script>
+    <!-- app.js -->
     <script src="script/app.js"></script>
 
     <!-- Bootstrap -->
@@ -92,7 +115,10 @@
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
       crossorigin="anonymous"></script>
 
-      <!-- ScrollRevealJS -->
+    <!-- AniJS core library -->
+    <script src="https://anijs.github.io/lib/anijs/anijs-min.js"></script>
+
+    <!-- ScrollRevealJS -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script>
       var slideUp = {
@@ -109,8 +135,6 @@
 
       ScrollReveal().reveal('.slideUp', slideUp);
     </script>
-  </body>
-
   </body>
 
 </html>
