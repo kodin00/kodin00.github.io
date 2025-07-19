@@ -21,3 +21,7 @@ p > a {
 p > a:hover {
     font-weight: bold;
 }
+
+a[href="#myporto"]:hover {
+    font-weight: 600;
+}
