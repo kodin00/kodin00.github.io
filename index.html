@@ -11,7 +11,6 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            cursor: none;
         }
 
         :root {
@@ -40,10 +39,6 @@
             min-height: 100vh;
         }
 
-        .cursor,
-        .cursor-dot {
-            display: none;
-        }
 
 
         /* Noise Overlay */
@@ -94,65 +89,6 @@
             }
         }
 
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-            mix-blend-mode: difference;
-        }
-
-        .nav-terminal {
-            background: rgba(10, 10, 10, 0.9);
-            border: 1px solid var(--terminal-green);
-            padding: 10px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 12px;
-            backdrop-filter: blur(10px);
-            transform: perspective(100px) rotateY(-5deg);
-            transition: all 0.3s ease;
-        }
-
-        .nav-terminal:hover {
-            transform: perspective(100px) rotateY(0deg) scale(1.05);
-            box-shadow: 0 0 30px rgba(0, 255, 65, 0.3);
-        }
-
-        .nav-terminal::before {
-            content: '$ nav --options';
-            color: var(--terminal-green);
-            display: block;
-            margin-bottom: 5px;
-            opacity: 0.7;
-        }
-
-        .nav-link {
-            color: var(--silver);
-            text-decoration: none;
-            display: block;
-            padding: 3px 0;
-            transition: all 0.3s ease;
-            position: relative;
-            cursor: none;
-        }
-
-        .nav-link::before {
-            content: '>';
-            color: var(--blood-red);
-            margin-right: 5px;
-            transition: all 0.3s ease;
-        }
-
-        .nav-link:hover::before {
-            color: var(--terminal-green);
-            margin-right: 10px;
-        }
-
-        .nav-link:hover {
-            color: var(--terminal-green);
-            padding-left: 5px;
-        }
 
         /* Hero Section */
         .hero {
@@ -200,6 +136,17 @@
             color: var(--ghost-white);
             letter-spacing: 0.1em;
         }
+        
+        .glitch::after {
+            content: '|';
+            color: var(--blood-red);
+            animation: blink-cursor 1s infinite;
+        }
+        
+        @keyframes blink-cursor {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
 
         .subtitle {
             font-family: 'JetBrains Mono', monospace;
@@ -213,7 +160,6 @@
 
         .role-text {
             transition: all 0.3s ease;
-            cursor: none;
             display: inline-block;
             width: 9ch; /* Fixed width to prevent layout shift - fits "Fullstack" */
         }
@@ -234,20 +180,39 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
-            opacity: 0.1;
+            opacity: 0.3;
         }
 
         .symbol {
             position: absolute;
             font-family: 'Cinzel', serif;
             font-size: 2rem;
-            color: var(--blood-red);
-            animation: drift 20s infinite linear;
+            color: #ff0000;
+            text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
         }
 
         @keyframes drift {
-            from { transform: translateX(-100px) rotate(0deg); }
-            to { transform: translateX(calc(100vw + 100px)) rotate(360deg); }
+            0% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(200px, -150px) rotate(90deg); }
+            50% { transform: translate(-100px, -300px) rotate(180deg); }
+            75% { transform: translate(-250px, -150px) rotate(270deg); }
+            100% { transform: translate(0, 0) rotate(360deg); }
+        }
+        
+        @keyframes driftAlt {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(-180px, 200px) rotate(90deg); }
+            50% { transform: translate(150px, 250px) rotate(180deg); }
+            75% { transform: translate(220px, -100px) rotate(270deg); }
+            100% { transform: translate(0, 0) rotate(360deg); }
+        }
+        
+        @keyframes driftCircular {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(150px, 150px) rotate(90deg); }
+            50% { transform: translate(0, 300px) rotate(180deg); }
+            75% { transform: translate(-150px, 150px) rotate(270deg); }
+            100% { transform: translate(0, 0) rotate(360deg); }
         }
 
         /* About Section */
@@ -362,7 +327,6 @@
             overflow: hidden;
             transform: perspective(1000px) rotateY(0deg);
             transition: all 0.5s ease;
-            cursor: none;
             clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
         }
 
@@ -443,7 +407,6 @@
             position: relative;
             overflow: hidden;
             transition: all 0.5s ease;
-            cursor: none;
             transform: translateX(0);
         }
 
@@ -512,7 +475,6 @@
             text-decoration: none;
             position: relative;
             transition: all 0.3s ease;
-            cursor: none;
         }
 
         .project-link::after {
@@ -576,7 +538,6 @@
             position: relative;
             overflow: hidden;
             transition: all 0.3s ease;
-            cursor: none;
             text-decoration: none;
             display: block;
         }
@@ -624,62 +585,10 @@
             transition: all 0.3s ease;
         }
 
-        /* System Status Panel */
-        .system-status {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(10, 10, 10, 0.9);
-            border: 1px solid var(--terminal-green);
-            padding: 15px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 10px;
-            color: var(--terminal-green);
-            z-index: 100;
-            backdrop-filter: blur(10px);
-            max-width: 200px;
-        }
-
-        .status-title {
-            margin-bottom: 10px;
-            color: var(--blood-red);
-            text-transform: uppercase;
-        }
-
-        .status-item {
-            display: flex;
-            justify-content: space-between;
-            margin: 5px 0;
-            opacity: 0.8;
-        }
-
-        .status-value {
-            color: var(--silver);
-        }
-
-        .blink {
-            animation: blink 1s infinite;
-        }
-
-        @keyframes blink {
-            0%, 50%, 100% { opacity: 1; }
-            25%, 75% { opacity: 0; }
-        }
 
         /* Responsive */
         @media (max-width: 768px) {
-            * {
-                cursor: auto !important;
-            }
 
-            .cursor,
-            .cursor-dot {
-                display: none;
-            }
-
-            .nav-terminal {
-                display: none;
-            }
 
             .glitch {
                 font-size: 2.5rem;
@@ -694,16 +603,10 @@
             }
 
 
-            .system-status {
-                display: none;
-            }
         }
     </style>
 </head>
 <body>
-    <!-- Custom Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-dot"></div>
 
     <!-- Noise Overlay -->
     <div class="noise"></div>
@@ -711,31 +614,21 @@
     <!-- Floating Particles -->
     <div class="particles" id="particles"></div>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-terminal">
-            <a href="#hero" class="nav-link">home</a>
-            <a href="#about" class="nav-link">about</a>
-            <a href="#skills" class="nav-link">skills</a>
-            <a href="#projects" class="nav-link">projects</a>
-            <a href="#contact" class="nav-link">contact</a>
-        </div>
-    </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-symbols">
-            <span class="symbol" style="top: 10%; left: 5%; animation-delay: 0s;">◊</span>
-            <span class="symbol" style="top: 20%; left: 15%; animation-delay: 2s;">✦</span>
-            <span class="symbol" style="top: 30%; left: 25%; animation-delay: 4s;">◈</span>
-            <span class="symbol" style="top: 40%; left: 35%; animation-delay: 6s;">☾</span>
-            <span class="symbol" style="top: 50%; left: 45%; animation-delay: 8s;">✧</span>
-            <span class="symbol" style="top: 60%; left: 55%; animation-delay: 10s;">◊</span>
-            <span class="symbol" style="top: 70%; left: 65%; animation-delay: 12s;">✦</span>
-            <span class="symbol" style="top: 80%; left: 75%; animation-delay: 14s;">◈</span>
+            <span class="symbol" style="top: 10%; left: 5%; animation: drift 15s infinite linear; animation-delay: 0s;">◊</span>
+            <span class="symbol" style="top: 20%; left: 15%; animation: driftAlt 18s infinite linear; animation-delay: 2s;">✦</span>
+            <span class="symbol" style="top: 30%; left: 25%; animation: driftCircular 20s infinite linear; animation-delay: 4s;">◈</span>
+            <span class="symbol" style="top: 40%; left: 35%; animation: drift 22s infinite linear; animation-delay: 6s;">☾</span>
+            <span class="symbol" style="top: 50%; left: 45%; animation: driftAlt 16s infinite linear; animation-delay: 8s;">✧</span>
+            <span class="symbol" style="top: 60%; left: 55%; animation: driftCircular 19s infinite linear; animation-delay: 10s;">◊</span>
+            <span class="symbol" style="top: 70%; left: 65%; animation: drift 17s infinite linear; animation-delay: 12s;">✦</span>
+            <span class="symbol" style="top: 80%; left: 75%; animation: driftAlt 21s infinite linear; animation-delay: 14s;">◈</span>
         </div>
         <div class="hero-content">
-            <h1 class="glitch" data-text="kodin00">kodin00</h1>
+            <h1 class="glitch" id="typing-text">Addin Satria</h1>
             <p class="subtitle">// <span class="role-text" data-original="Platform" data-hover="Fullstack">Platform</span> Engineer</p>
         </div>
     </section>
@@ -889,26 +782,6 @@
         </div>
     </section>
 
-    <!-- System Status Panel -->
-    <div class="system-status">
-        <div class="status-title">// System Status</div>
-        <div class="status-item">
-            <span>Uptime:</span>
-            <span class="status-value">99.97%</span>
-        </div>
-        <div class="status-item">
-            <span>Deploy:</span>
-            <span class="status-value">v2.1.0</span>
-        </div>
-        <div class="status-item">
-            <span>Status:</span>
-            <span class="status-value blink">ONLINE</span>
-        </div>
-        <div class="status-item">
-            <span>Visitors:</span>
-            <span class="status-value" id="visitor-count">0001</span>
-        </div>
-    </div>
 
     <script>
         // Role text functionality
@@ -1023,56 +896,43 @@
             }
         });
 
-        // Mouse Trail Effect
-        let mouseTrail = [];
-        const trailLength = 10;
+        // Typing Effect for Hero Title
+        const typingText = document.getElementById('typing-text');
+        const texts = ['Addin Satria', 'kodin00'];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typingSpeed = 100;
 
-        for (let i = 0; i < trailLength; i++) {
-            const trail = document.createElement('div');
-            trail.style.position = 'fixed';
-            trail.style.width = '4px';
-            trail.style.height = '4px';
-            trail.style.background = 'var(--blood-red)';
-            trail.style.borderRadius = '50%';
-            trail.style.pointerEvents = 'none';
-            trail.style.opacity = (1 - i / trailLength) * 0.5;
-            trail.style.transition = `all ${0.1 + i * 0.01}s ease`;
-            trail.style.zIndex = 9998 - i;
-            document.body.appendChild(trail);
-            mouseTrail.push(trail);
-        }
-
-        let mouseX = 0, mouseY = 0;
-        let trailX = [], trailY = [];
-
-        for (let i = 0; i < trailLength; i++) {
-            trailX[i] = 0;
-            trailY[i] = 0;
-        }
-
-        document.addEventListener('mousemove', (e) => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-        });
-
-        function animateTrail() {
-            trailX[0] = mouseX;
-            trailY[0] = mouseY;
-
-            for (let i = trailLength - 1; i > 0; i--) {
-                trailX[i] = trailX[i - 1];
-                trailY[i] = trailY[i - 1];
+        function typeWriter() {
+            const currentText = texts[textIndex];
+            
+            if (isDeleting) {
+                typingText.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+                typingSpeed = 50;
+            } else {
+                typingText.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+                typingSpeed = 100;
             }
 
-            for (let i = 0; i < trailLength; i++) {
-                mouseTrail[i].style.left = trailX[i] + 'px';
-                mouseTrail[i].style.top = trailY[i] + 'px';
+            if (!isDeleting && charIndex === currentText.length) {
+                // Finished typing, wait before deleting
+                setTimeout(() => {
+                    isDeleting = true;
+                }, 2000);
+            } else if (isDeleting && charIndex === 0) {
+                // Finished deleting, move to next text
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
             }
 
-            requestAnimationFrame(animateTrail);
+            setTimeout(typeWriter, typingSpeed);
         }
-        animateTrail();
 
+        // Start typing effect after page loads
+        setTimeout(typeWriter, 1000);
 
         console.log('%c WELCOME TO THE DARK CODEX ', 'background: #8b0000; color: #fff; font-size: 20px; padding: 10px;');
         console.log('%c Type "reveal()" to unlock hidden features ', 'color: #00ff41; font-family: monospace;');
