@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kodin00 - Portfolio</title>
+    <title>Addin Satria</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Crimson+Text:wght@400;600&family=JetBrains+Mono:wght@300;400;600&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
     <style>
@@ -137,16 +137,7 @@
             letter-spacing: 0.1em;
         }
         
-        .glitch::after {
-            content: '|';
-            color: var(--blood-red);
-            animation: blink-cursor 1s infinite;
-        }
         
-        @keyframes blink-cursor {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
-        }
 
         .subtitle {
             font-family: 'JetBrains Mono', monospace;
@@ -628,7 +619,7 @@
             <span class="symbol" style="top: 80%; left: 75%; animation: driftAlt 21s infinite linear; animation-delay: 14s;">◈</span>
         </div>
         <div class="hero-content">
-            <h1 class="glitch" id="typing-text">Addin Satria</h1>
+            <h1 class="glitch">addin satria</h1>
             <p class="subtitle">// <span class="role-text" data-original="Platform" data-hover="Fullstack">Platform</span> Engineer</p>
         </div>
     </section>
@@ -896,43 +887,6 @@
             }
         });
 
-        // Typing Effect for Hero Title
-        const typingText = document.getElementById('typing-text');
-        const texts = ['Addin Satria', 'kodin00'];
-        let textIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        let typingSpeed = 100;
-
-        function typeWriter() {
-            const currentText = texts[textIndex];
-            
-            if (isDeleting) {
-                typingText.textContent = currentText.substring(0, charIndex - 1);
-                charIndex--;
-                typingSpeed = 50;
-            } else {
-                typingText.textContent = currentText.substring(0, charIndex + 1);
-                charIndex++;
-                typingSpeed = 100;
-            }
-
-            if (!isDeleting && charIndex === currentText.length) {
-                // Finished typing, wait before deleting
-                setTimeout(() => {
-                    isDeleting = true;
-                }, 2000);
-            } else if (isDeleting && charIndex === 0) {
-                // Finished deleting, move to next text
-                isDeleting = false;
-                textIndex = (textIndex + 1) % texts.length;
-            }
-
-            setTimeout(typeWriter, typingSpeed);
-        }
-
-        // Start typing effect after page loads
-        setTimeout(typeWriter, 1000);
 
         console.log('%c WELCOME TO THE DARK CODEX ', 'background: #8b0000; color: #fff; font-size: 20px; padding: 10px;');
         console.log('%c Type "reveal()" to unlock hidden features ', 'color: #00ff41; font-family: monospace;');
