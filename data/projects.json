@@ -1,0 +1,46 @@
+[
+  {
+    "id": "project-1",
+    "title": "E-Commerce Platform",
+    "description": "A full-stack e-commerce platform built with modern web technologies. Features include user authentication, product catalog, shopping cart, payment integration, and admin dashboard.",
+    "technologies": "React, Node.js, MongoDB, Stripe API",
+    "duration": "4 months",
+    "link": "https://github.com/yourusername/ecommerce-platform"
+  },
+  {
+    "id": "project-2",
+    "title": "Task Management Mobile App",
+    "description": "Cross-platform mobile application for task and project management. Includes real-time collaboration, file sharing, and push notifications.",
+    "technologies": "React Native, Firebase, Redux",
+    "duration": "3 months",
+    "link": "https://github.com/yourusername/task-manager"
+  },
+  {
+    "id": "project-3",
+    "title": "Real-Time Chat Application",
+    "description": "A real-time chat application with multiple rooms, direct messaging, file sharing, and emoji reactions. Built with modern web technologies for optimal performance.",
+    "technologies": "Vue.js, Socket.io, Express.js, Redis"
+  },
+  {
+    "id": "project-4",
+    "title": "Machine Learning Data Analyzer",
+    "description": "A comprehensive data analysis tool that uses machine learning algorithms to provide insights from large datasets. Features automated reporting and visualization.",
+    "technologies": "Python, TensorFlow, Pandas, Matplotlib",
+    "duration": "6 months",
+    "link": "https://github.com/yourusername/ml-analyzer"
+  },
+  {
+    "id": "project-5",
+    "title": "Desktop Productivity Suite",
+    "description": "A cross-platform desktop application suite for productivity management including note-taking, calendar, and file organization tools.",
+    "technologies": "Electron, JavaScript, SQLite, Node.js",
+    "duration": "5 months"
+  },
+  {
+    "id": "project-6",
+    "title": "Blockchain Voting System",
+    "description": "A secure and transparent voting system built on blockchain technology. Ensures vote integrity and provides real-time results tracking.",
+    "technologies": "Solidity, Web3.js, React, Ethereum",
+    "link": "https://github.com/yourusername/blockchain-voting"
+  }
+]

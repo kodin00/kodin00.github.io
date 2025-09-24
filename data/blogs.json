@@ -1,0 +1,38 @@
+[
+  {
+    "id": "blog-1",
+    "title": "Modern Web Development Trends 2024",
+    "description": "An in-depth exploration of the latest trends shaping web development in 2024. Covering new frameworks, design patterns, and development methodologies that are revolutionizing how we build web applications.",
+    "technologies": "Web Development, JavaScript, React, Vue.js",
+    "duration": "2 weeks",
+    "link": "https://yourblog.com/web-trends-2024"
+  },
+  {
+    "id": "blog-2",
+    "title": "Building Scalable Mobile Applications",
+    "description": "A comprehensive guide to developing mobile applications that can scale with your business. Learn about architecture patterns, performance optimization, and best practices for cross-platform development.",
+    "technologies": "Mobile Development, React Native, Flutter",
+    "link": "https://yourblog.com/scalable-mobile-apps"
+  },
+  {
+    "id": "blog-3",
+    "title": "The Future of Artificial Intelligence",
+    "description": "Exploring the cutting-edge developments in artificial intelligence and machine learning. Discussing the implications for software development and the opportunities for developers.",
+    "technologies": "AI, Machine Learning, Python, TensorFlow",
+    "duration": "1 week"
+  },
+  {
+    "id": "blog-4",
+    "title": "Microservices Architecture Deep Dive",
+    "description": "A detailed analysis of microservices architecture patterns, benefits, and challenges. Learn how to design, implement, and maintain distributed systems effectively.",
+    "technologies": "Backend Development, Docker, Kubernetes, Node.js",
+    "duration": "3 weeks",
+    "link": "https://yourblog.com/microservices-guide"
+  },
+  {
+    "id": "blog-5",
+    "title": "Cybersecurity Best Practices for Developers",
+    "description": "Essential security practices every developer should know. Covering secure coding practices, vulnerability assessment, and how to protect applications from common threats.",
+    "technologies": "Security, OWASP, Encryption, Authentication"
+  }
+]
