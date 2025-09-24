@@ -269,7 +269,7 @@ function toggleAboutVersion() {
 
     const regularText = "Deliver fast & reliable solutions, leveraging the latest technologies and best practices to ensure performance, maintainability, and cost.";
 
-    const technicalText = "This web made with the basics 3 (html+css+js, no framework) for performance, deployed with Docker on an efficient selfhosted Proxmox server leveraging Cloudflare for optimal speed and security.";
+    const technicalText = "This web made with the basic 3 (html+css+js, no framework) for performance, deployed with Docker on an efficient selfhosted Proxmox server leveraging Cloudflare for optimal speed and security.";
 
     if (checkbox.checked) {
         aboutText.innerHTML = technicalText;
